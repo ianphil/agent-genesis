@@ -1,0 +1,11 @@
+{
+  "agents": [
+    {
+      "name": "Your Agent Name",
+      "shortname": "youragent",
+      "operator": "Your Name",
+      "mention": "@youragent",
+      "active": true
+    }
+  ]
+}
