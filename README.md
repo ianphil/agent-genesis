@@ -1,40 +1,50 @@
-# Public Notes
+# Agent Genesis
 
-Selectively shared notes from [Miss Moneypenny](https://github.com/ianphil/miss-moneypenny) — an AI chief of staff built on GitHub Copilot. The private repo contains the full system; this repo shares the parts worth sharing.
+Build a persistent AI chief of staff — an agent with identity, memory, and growing capability — using GitHub Copilot and a markdown repository.
 
-## What's Here
+This repo is both the bootstrap kit and the growth path: start from nothing, end up with an agent that knows you, remembers across sessions, and runs your operation.
 
-| File | About |
-|------|-------|
-| [`expertise/building-a-chief-of-staff.md`](expertise/building-a-chief-of-staff.md) | Walkthrough: building a persistent, personable AI assistant with identity, memory, retrieval, and session continuity |
-| [`expertise/IDEA-notes-setup.md`](expertise/IDEA-notes-setup.md) | Tutorial: setting up IDEA-structured notes with git |
-| [`expertise/git-orphan-branch-public-publishing.md`](expertise/git-orphan-branch-public-publishing.md) | How to selectively publish from a private repo using orphan branches |
+## Start Here
 
-## The System
+**[`genesis/GENESIS.md`](genesis/GENESIS.md)** — The bootstrap wizard. Drop it into an empty repo, start a Copilot session, and it walks you through building your agent from scratch. Self-deleting — it replaces itself when the job is done.
 
-These notes live in a **private git repo** using the IDEA structure. I selectively publish notes here using a git worktree on an orphan branch — so this public repo shares none of the private repo's history.
+**[`genesis/quickstart.md`](genesis/quickstart.md)** — The manual path. Step-by-step guide if you prefer to understand each piece as you build it.
 
-### IDEA Structure
+## Capabilities
 
-| Folder | Purpose |
-|--------|---------|
-| **I**nitiatives | Projects with a defined end goal |
-| **D**omains | Recurring areas of responsibility |
-| **E**xpertise | Notes on things I learn |
-| **A**rchive | Completed or inactive items |
-| Inbox | Quick capture, triaged later |
+Feature guides for an agent that already exists. Each one adds a new dimension:
 
-Not all folders will be present here — only what I've chosen to share publicly.
+| Guide | What it adds |
+|-------|-------------|
+| [Heartbeat](capabilities/heartbeat.md) | Ambient pattern scanning on a schedule |
+| [Morning Briefing](capabilities/morning-briefing.md) | Automated daily report across all your surfaces |
+| [Switchboard](capabilities/switchboard/switchboard.md) | Teams mention monitor — the agent's inbox |
+| [MCPorter + Agency](capabilities/mcporter-agency.md) | Microsoft 365 access via CLI |
+| [QMD Mind Search](capabilities/qmd-mind-search.md) | Hybrid search (keyword + semantic) across the mind |
 
-### Publishing Workflow
+## Craft
 
-Notes move from private → public by cherry-picking individual files:
+The thinking behind the system:
 
-```sh
-# From within the public worktree
-git checkout master -- expertise/some-note.md
-git commit -m "Publish note on X"
-git push public public-branch:main
-```
+| Article | About |
+|---------|-------|
+| [Building a Chief of Staff](craft/building-a-chief-of-staff.md) | Full walkthrough — identity, memory, retrieval, continuity |
+| [Building an Agent with Attitude](craft/building-an-agent-with-attitude.md) | Why personality is load-bearing, not cosmetic |
+| [How an Agent Uses IDEA](craft/how-an-agent-uses-idea.md) | Agent-perspective on operating inside the knowledge structure |
+| [IDEA Notes Setup](craft/IDEA-notes-setup.md) | The knowledge structure method |
+| [Git Orphan Branch Publishing](craft/git-orphan-branch-public-publishing.md) | Selectively publish from a private repo |
 
-See [`expertise/git-orphan-branch-public-publishing.md`](expertise/git-orphan-branch-public-publishing.md) for the full setup guide.
+## Skills
+
+Portable Copilot skills in [`.github/skills/`](.github/skills/) — drop them into any agent's repo:
+
+- **commit** — stage, write session observations, commit, push
+- **capture** — classify and place knowledge in the mind
+- **daily-report** — morning briefing generator
+- **qmd** — hybrid search skill
+- **share** — publish to a public repo via orphan branch
+- **skill-creator** — create, test, and benchmark new skills
+
+## Origin
+
+This grew out of [Miss Moneypenny](https://github.com/ianphil/miss-moneypenny) — an AI chief of staff built on Copilot. What started as personal notes became a bootstrap kit when others started building their own agents. Six chiefs of staff and counting.

@@ -2,7 +2,7 @@
 
 The Switchboard gives your AI Chief of Staff a **Teams inbox**. It monitors channels for @mentions, triages each one, and either replies directly, escalates to the operator, or silently observes.
 
-This pairs with the [Heartbeat](heartbeat.md) (ambient mind scan) and [Morning Briefing](morning-briefing.md) (daily report). Together they form the agent's autonomous loop: the briefing sets context, the heartbeat watches the mind, and the switchboard watches the world.
+This pairs with the [Heartbeat](../heartbeat.md) (ambient mind scan) and [Morning Briefing](../morning-briefing.md) (daily report). Together they form the agent's autonomous loop: the briefing sets context, the heartbeat watches the mind, and the switchboard watches the world.
 
 ## Prerequisites
 

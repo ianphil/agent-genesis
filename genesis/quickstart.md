@@ -13,7 +13,7 @@ Get a persistent AI chief of staff running in ~30 minutes. This guide connects t
 
 ### 1. Create SOUL.md
 
-Copy [`soul-template.md`](soul-template.md) to `SOUL.md` at your repo root. Customize:
+Copy [`soul-template.md`](templates/soul-template.md) to `SOUL.md` at your repo root. Customize:
 
 - **Mission** — define the division of labor ("You build, I run the building")
 - **Voice** — pick a character, tone, and register. Be specific. Generic = forgettable.
@@ -23,7 +23,7 @@ Copy [`soul-template.md`](soul-template.md) to `SOUL.md` at your repo root. Cust
 
 ### 2. Create the agent file
 
-Create `.github/agents/{your-agent-name}.agent.md` using [`agent-file-template.md`](agent-file-template.md) as your starting point. Key sections:
+Create `.github/agents/{your-agent-name}.agent.md` using [`agent-file-template.md`](templates/agent-file-template.md) as your starting point. Key sections:
 
 - **YAML frontmatter** — `name`, `description`, `model` (required for Copilot to discover the agent)
 - **Boot sequence** — first lines tell the agent to read SOUL.md, then memory files
@@ -63,7 +63,7 @@ mkdir -p .working-memory
 
 ### 5. Create memory.md
 
-Start minimal — it grows organically. See [`working-memory-example.md`](working-memory-example.md) for what a mature version looks like.
+Start minimal — it grows organically. See [`working-memory-example.md`](templates/working-memory-example.md) for what a mature version looks like.
 
 ```markdown
 # AI Notes — Memory
@@ -89,7 +89,7 @@ Last consolidated: [today's date]
 
 ### 6. Create rules.md
 
-Start empty — it fills itself through mistakes. See [`rules-example.md`](rules-example.md) for what emerges over time.
+Start empty — it fills itself through mistakes. See [`rules-example.md`](templates/rules-example.md) for what emerges over time.
 
 ```markdown
 # AI Notes — Rules
@@ -163,7 +163,7 @@ The agent will start capturing context, creating notes, and asking clarifying qu
 
 ### 13. End with a commit
 
-Tell the agent to commit. A good commit skill will write session observations to working memory before staging. See the [commit skill](../../.github/skills/commit/SKILL.md) for an example.
+Tell the agent to commit. A good commit skill will write session observations to working memory before staging. See the [commit skill](../.github/skills/commit/SKILL.md) for an example.
 
 ---
 
@@ -178,12 +178,12 @@ These layers build organically over sessions. Don't rush them.
 - The agent's personality will start sharpening through feedback
 
 ### Week 2: Skills and search
-- Add a [daily report skill](morning-briefing.md) for morning briefings
-- Add [QMD search](qmd-mind-search.md) for hybrid retrieval across the mind
+- Add a [daily report skill](../capabilities/morning-briefing.md) for morning briefings
+- Add [QMD search](../capabilities/qmd-mind-search.md) for hybrid retrieval across the mind
 - Build your first custom skill from whatever workflow you repeat most
 
 ### Week 3+: Automation and integrations
-- Add a [heartbeat](heartbeat.md) for ambient pattern scanning
+- Add a [heartbeat](../capabilities/heartbeat.md) for ambient pattern scanning
 - Connect external tools (work tracking, email, calendar, chat)
 - Let the commit skill and session handover become habits
 
@@ -246,13 +246,13 @@ your-repo/
 
 ## Related Resources
 
-- [Building a Chief of Staff](../building-a-chief-of-staff.md) — the full walkthrough (theory + practice)
-- [How an Agent Uses IDEA](../how-an-agent-uses-idea.md) — agent-perspective on operating inside the mind
-- [IDEA Notes Setup](../IDEA-notes-setup.md) — the knowledge structure method
-- [Soul Template](soul-template.md) — customizable identity document
-- [Agent File Template](agent-file-template.md) — operating instructions template
-- [Working Memory Example](working-memory-example.md) — what mature memory looks like
-- [Rules Example](rules-example.md) — what emerges from a month of mistakes
-- [Morning Briefing](morning-briefing.md) — automated daily report setup
-- [Heartbeat](heartbeat.md) — ambient pattern scanning
-- [QMD Mind Search](qmd-mind-search.md) — hybrid search for the mind
+- [Building a Chief of Staff](../craft/building-a-chief-of-staff.md) — the full walkthrough (theory + practice)
+- [How an Agent Uses IDEA](../craft/how-an-agent-uses-idea.md) — agent-perspective on operating inside the mind
+- [IDEA Notes Setup](../craft/IDEA-notes-setup.md) — the knowledge structure method
+- [Soul Template](templates/soul-template.md) — customizable identity document
+- [Agent File Template](templates/agent-file-template.md) — operating instructions template
+- [Working Memory Example](templates/working-memory-example.md) — what mature memory looks like
+- [Rules Example](templates/rules-example.md) — what emerges from a month of mistakes
+- [Morning Briefing](../capabilities/morning-briefing.md) — automated daily report setup
+- [Heartbeat](../capabilities/heartbeat.md) — ambient pattern scanning
+- [QMD Mind Search](../capabilities/qmd-mind-search.md) — hybrid search for the mind
